@@ -360,6 +360,40 @@ header nav a:hover::after {
   flex-wrap: wrap;
 }
 
+.buy-btns {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* WhatsApp button — white box, orange text */
+.btn-wa {
+  background: #ffffff;
+  color: var(--orange) !important;
+  border: 1px solid #ffffff;
+  font-size: 0.65rem;
+  padding: 0.5rem 0.9rem;
+}
+
+.btn-wa:hover {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+/* eBay button — orange box, black text */
+.btn-ebay {
+  background: var(--orange);
+  color: var(--black) !important;
+  border: 1px solid var(--orange);
+  font-size: 0.65rem;
+  padding: 0.5rem 0.9rem;
+}
+
+.btn-ebay:hover {
+  background: var(--orange2);
+  border-color: var(--orange2);
+}
+
 .price {
   font-family: var(--font-display);
   font-size: 1.6rem;
