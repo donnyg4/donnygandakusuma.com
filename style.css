@@ -368,16 +368,18 @@ header nav a:hover::after {
 
 /* WhatsApp button — white box, orange text */
 .btn-wa {
-  background: #ffffff;
-  color: var(--orange) !important;
-  border: 1px solid #ffffff;
+  background: #ffffff !important;
+  color: #e8650a !important;
+  -webkit-text-fill-color: #e8650a !important;
+  border: 2px solid #e8650a !important;
   font-size: 0.65rem;
   padding: 0.5rem 0.9rem;
 }
 
 .btn-wa:hover {
-  background: #f0f0f0;
-  border-color: #f0f0f0;
+  background: #f5f5f5 !important;
+  color: #e8650a !important;
+  -webkit-text-fill-color: #e8650a !important;
 }
 
 /* eBay button — orange box, black text */
@@ -423,6 +425,7 @@ header nav a:hover::after {
   padding: 0.6rem 1.2rem;
   background: var(--orange);
   color: var(--black);
+  -webkit-text-fill-color: var(--black);
   border: 1px solid var(--orange);
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
