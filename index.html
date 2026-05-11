@@ -204,3 +204,107 @@
     <article class="art-card">
       <div class="art-img-wrap">
         <img src="images/batman-barong.jpg" alt="Batman on Garg
+oyle Bali Barong" loading="lazy">
+        <span class="badge available">Available</span>
+      </div>
+      <div class="art-info">
+        <h2>Batman on Gargoyle — Bali Barong</h2>
+        <p class="art-size">11 × 17 inches · Ink on paper</p>
+        <div class="art-footer">
+          <span class="price">USD $199</span>
+          <div class="buy-btns">
+            <a href="https://wa.me/628170910308?text=Hi%20Donny%2C%20I%27m%20interested%20in%20purchasing%20Batman%20on%20Gargoyle%20Bali%20Barong%20original%20art." target="_blank" class="btn btn-wa">Buy</a>
+            <a href="https://www.ebay.com/usr/donnygandakusuma" target="_blank" class="btn btn-ebay">eBay</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="art-card sold-card">
+      <div class="art-img-wrap">
+        <img src="images/spider-gwen.jpg" alt="Spider-Gwen Stacy Original Art" loading="lazy">
+        <span class="badge sold">Sold</span>
+      </div>
+      <div class="art-info">
+        <h2>Spider-Gwen Stacy</h2>
+        <p class="art-size">11 × 17 inches · Ink on paper</p>
+        <div class="art-footer">
+          <span class="price sold-price">SOLD</span>
+          <a href="commission.html" class="btn btn-ebay">Commission Similar →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="art-card sold-card">
+      <div class="art-img-wrap">
+        <img src="images/batman-gargoyle.jpg" alt="Batman on Gargoyle Hellboy Head" loading="lazy">
+        <span class="badge sold">Sold</span>
+      </div>
+      <div class="art-info">
+        <h2>Batman on Gargoyle — Hellboy Head</h2>
+        <p class="art-size">11 × 17 inches · Ink on paper</p>
+        <div class="art-footer">
+          <span class="price sold-price">SOLD</span>
+          <a href="commission.html" class="btn btn-ebay">Commission Similar →</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="trust-strip">
+    <div class="trust-inner">
+      <blockquote>"Donny is the absolute best! Original art was exactly as pictured. Packaged insanely well. By far the fastest international shipping I've ever experienced."<cite>— eBay Buyer (USA)</cite></blockquote>
+      <blockquote>"Artwork is exceptional and even better than the pictures suggested. I am very happy with my purchase."<cite>— eBay Buyer (USA)</cite></blockquote>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Want something specific?</h2>
+    <p>Commission a custom original piece — your character, your size, hand-drawn by Donny.</p>
+    <a href="commission.html" class="btn btn-large">Request a Commission</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-main">DONNY GANDAKUSUMA</span>
+      <span class="logo-sub">Original Comic Art · Indonesia</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">For Sale</a>
+      <a href="commission.html">Commission</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/donnygandakusuma" target="_blank">Instagram</a>
+      <a href="https://www.ebay.com/usr/donnygandakusuma" target="_blank">eBay Store</a>
+      <a href="https://www.tiktok.com/@donny.gandakusuma" target="_blank">TikTok</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2025 Donny Gandakusuma. All artwork is original and hand-drawn. All rights reserved.</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('navToggle');
+  var nav = document.getElementById('mobileNav');
+  if (btn && nav) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target) && e.target !== btn) {
+        nav.classList.remove('open');
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
