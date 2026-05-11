@@ -25,7 +25,7 @@
       <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
   </div>
   <nav class="mobile-nav" id="mobileNav">
     <a href="index.html">For Sale</a>
@@ -108,6 +108,22 @@
   </div>
   <p class="footer-copy">© 2025 Donny Gandakusuma. All artwork is original and hand-drawn. All rights reserved.</p>
 </footer>
-<script>function toggleNav(){document.getElementById('mobileNav').classList.toggle('open');}</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('navToggle');
+  var nav = document.getElementById('mobileNav');
+  if (btn && nav) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', function(e) {
+      if (!nav.contains(e.target) && e.target !== btn) {
+        nav.classList.remove('open');
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>

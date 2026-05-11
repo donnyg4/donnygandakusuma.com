@@ -55,7 +55,7 @@ a { color: inherit; text-decoration: none; }
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
@@ -140,6 +140,11 @@ header nav a:hover::after {
   cursor: pointer;
   padding: 0.4rem 0.7rem;
   border-radius: 3px;
+  position: relative;
+  z-index: 200;
+  min-width: 44px;
+  min-height: 44px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-nav {
