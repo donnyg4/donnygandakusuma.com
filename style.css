@@ -151,7 +151,7 @@ header nav a:hover::after {
   gap: 1rem;
 }
 
-.mobile-nav.open { display: flex; }
+.mobile-nav.open { display: flex !important; }
 
 .mobile-nav a {
   font-family: var(--font-mono);
