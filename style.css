@@ -440,6 +440,8 @@ header nav a:hover::after {
 .btn-ghost {
   background: transparent;
   color: var(--orange);
+  /* PERBAIKAN TOMBOL "REQUEST COMMISSION" AGAR TERLIHAT JELAS */
+  -webkit-text-fill-color: var(--orange);
 }
 
 .btn-ghost:hover {
@@ -1015,7 +1017,8 @@ footer {
    ============================================ */
 
 @media (max-width: 900px) {
-  header nav { display: none; }
+  /* PERBAIKAN MENU MOBILE: Hanya menyembunyikan navigasi khusus Desktop */
+  .header-inner nav { display: none; }
   .nav-toggle { display: block; }
 
   .commission-layout,
