@@ -8,12 +8,101 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<!-- Google Analytics -->
+
+<style>
+  /* Pop-up Modal Styles */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+  }
+  .modal-overlay.active {
+    display: flex;
+  }
+  .modal-content {
+    background: var(--black2);
+    border: 1px solid var(--orange);
+    padding: 2.5rem 2rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeUp 0.3s ease forwards;
+  }
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--orange);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s;
+  }
+  .modal-close:hover {
+    transform: scale(1.1);
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .form-group label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--white-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .form-group input, 
+  .form-group textarea {
+    background: var(--black3);
+    border: 1px solid var(--border);
+    color: var(--white);
+    padding: 0.85rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus, 
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  /* Button reset for the contact card */
+  button.contact-card {
+    width: 100%;
+    text-align: left;
+    appearance: none;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+</style>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY4FN2Z0T6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'G-JY4FN2Z0T6');
 </script>
 </head>
@@ -53,6 +142,16 @@
 
   <section class="contact-layout">
     <div class="contact-channels">
+      
+      <button id="openContactModal" class="contact-card" style="border-color: rgba(232, 101, 10, 0.5);">
+        <span class="contact-icon">✉️</span>
+        <div>
+          <strong style="color: var(--orange);">Direct Message</strong>
+          <p>Send an email directly to my inbox. Best for commission details or specific requests.</p>
+          <span class="contact-link">Open Form →</span>
+        </div>
+      </button>
+
       <a href="https://www.ebay.com/usr/donnygandakusuma" target="_blank" class="contact-card">
         <span class="contact-icon">🛒</span>
         <div>
@@ -103,6 +202,31 @@
   </section>
 </main>
 
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-content">
+    <button class="modal-close" id="closeContactModal">&times;</button>
+    <h2 style="font-family: var(--font-display); font-size: 2.2rem; letter-spacing: 0.04em;">Direct Message</h2>
+    
+    <form action="https://formsubmit.co/donnyg4@yahoo.com" method="POST" class="contact-form">
+      <input type="hidden" name="_subject" value="New Contact Form Submission - Donny Gandakusuma Art">
+      
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Bruce Wayne">
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="bruce@wayneenterprises.com">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Tell me about the artwork you are interested in..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-large" style="margin-top: 0.5rem; text-align: center;">Send Message</button>
+    </form>
+  </div>
+</div>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -124,8 +248,10 @@
   </div>
   <p class="footer-copy">© 2025 Donny Gandakusuma. All artwork is original and hand-drawn. All rights reserved.</p>
 </footer>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobile Nav Toggle
   var btn = document.getElementById('navToggle');
   var nav = document.getElementById('mobileNav');
   if (btn && nav) {
@@ -136,6 +262,35 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
       if (!nav.contains(e.target) && e.target !== btn) {
         nav.classList.remove('open');
+      }
+    });
+  }
+
+  // Pop-up Modal Logic
+  var modal = document.getElementById('contactModal');
+  var openModalBtn = document.getElementById('openContactModal');
+  var closeModalBtn = document.getElementById('closeContactModal');
+
+  if (modal && openModalBtn && closeModalBtn) {
+    // Open Modal
+    openModalBtn.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevents page jumping
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevents background scrolling
+    });
+
+    // Close Modal via 'X' button
+    closeModalBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Close Modal by clicking outside the box
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   }
