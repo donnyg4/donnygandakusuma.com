@@ -8,6 +8,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+  /* Fix for the single portfolio image */
+  .portfolio-single {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .portfolio-single img {
+    max-width: 100%;
+    height: auto; /* Ensures original ratio is kept */
+    display: inline-block;
+    /* Preserves your original grayscale hover effect */
+    filter: grayscale(20%);
+    transition: filter 0.3s, transform 0.3s;
+  }
+  .portfolio-single img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+  }
+</style>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY4FN2Z0T6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -116,7 +138,7 @@
 
   <section class="commission-gallery">
     <h2>Previous Commissions</h2>
-    <div class="gallery-grid">
+    <div class="portfolio-single">
       <img src="images/portfolio.jpg" alt="Previous Commissions Portfolio" loading="lazy">
     </div>
   </section>
