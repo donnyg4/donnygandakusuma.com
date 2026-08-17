@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://donnygandakusuma.com/sitemap.xml
+Sitemap: https://www.donnygandakusuma.com/sitemap.xml
