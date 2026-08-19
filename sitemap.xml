@@ -1,29 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  
+  <!-- Main Pages -->
   <url>
     <loc>https://www.donnygandakusuma.com/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://www.donnygandakusuma.com/commission.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.donnygandakusuma.com/portfolio.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.donnygandakusuma.com/about.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.donnygandakusuma.com/contact.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Original Comic Art Pages -->
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/wonder-woman-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/magik-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/conan-the-barbarian-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/absolute-batman-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/red-sonja-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/the-batman-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/wonder-woman-golden-age-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/batman-vs-man-bat-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.donnygandakusuma.com/original-comic-art/batman-on-gargoyle-bali-barong-original-comic-art.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
