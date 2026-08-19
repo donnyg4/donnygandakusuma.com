@@ -21,6 +21,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.art-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+.art-card-link:hover {
+  text-decoration: none;
+}
+.art-card-link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+}
+</style>
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JY4FN2Z0T6"></script>
 <script>
@@ -116,11 +130,21 @@ gtag('config', 'G-JY4FN2Z0T6');
 
 <article class="art-card">
   <div class="art-img-wrap">
-    <img src="images/Wonder Woman Original Art small.jpg" alt="Wonder Woman original comic art for sale — hand-drawn ink illustration by Donny Gandakusuma" loading="lazy">
+    <a href="original-comic-art/wonder-woman-original-comic-art.html"
+       class="art-card-link"
+       aria-label="View Wonder Woman Original Comic Art">
+      <img src="images/Wonder Woman Original Art small.jpg"
+           alt="Wonder Woman original comic art for sale — hand-drawn ink illustration by Donny Gandakusuma"
+           width="571" height="800"
+           loading="lazy">
+    </a>
     <span class="badge available">Available</span>
   </div>
   <div class="art-info">
-    <h2>Wonder Woman Original Comic Art</h2>
+    <h2>
+      <a href="original-comic-art/wonder-woman-original-comic-art.html"
+         class="art-card-link">Wonder Woman Original Comic Art</a>
+    </h2>
     <p class="art-desc">Original hand-drawn ink illustration of Wonder Woman, a unique one-of-a-kind comic art piece for collectors.</p>
     <p class="art-size">8.27 × 11.69 inches · Ink on paper</p>
     <div class="art-footer">
